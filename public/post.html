@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html ng-app>
+	<head>
+		<title>Mean News Finder</title>
+		<link rel="stylesheet" type="text/css"  href="style.css">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+		<script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+	  <script src="https://code.jquery.com/ui/2.2.3/jquery-ui.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	</head>
+
+	<body ng-app="MyApp">
+		<div class="container" ng-controller="AppCtrl" >
+			<h1>News Post</h1>
+
+			<div>
+				<tr>
+					<td>Date<input class="form-control" ng-model="news.date" placeholder="DD-MM-YYYY"></td>
+					<td>Title<input class="form-control" ng-model="news.title"></td>
+					<td>Content<textarea cols="50" rows="12" class="form-control" ng-model="news.content"></textarea></td>
+					<td>Genre
+
+						<div>
+							<label class="custom-control custom-radio">
+							  <input id="radio1" name="radio" type="radio" class="custom-control-input">
+							  <span class="custom-control-indicator"></span>
+							  <span class="custom-control-description">Bussiness</span>
+							</label>
+							<label class="custom-control custom-radio">
+							  <input id="radio2" name="radio" type="radio" class="custom-control-input">
+							  <span class="custom-control-indicator"></span>
+							  <span class="custom-control-description">Technology</span>
+							</label>
+					  </div>
+			    </td>
+
+					<td>Publisher<input class="form-control" ng-model="news.publisher"></td>
+					<td></td>
+		  	</tr>
+		  </div>
+
+			<div>
+				<a href="index.html"><button class="btn btn-primary" ng-click="addNews()">Post</button></a>
+			</div>
+
+		<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js">
+		</script>
+		<script src="controllers/controller.js"></script>
+	</body>
+</html>
